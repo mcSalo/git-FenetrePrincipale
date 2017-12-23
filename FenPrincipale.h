@@ -8,16 +8,23 @@
 #include <QMdiArea>
 #include <QTextEdit>
 #include <QMenuBar>
+#include <QMenu>
+#include <QMouseEvent>
 
 
 class FenPrincipale: public QMainWindow //On procede toujours par heritage
 //2 types de QMainWindow: SDI>un doc a la fois, MDI>plusieurs doc a la fois
 {
-    public:
+    Q_OBJECT
+public:
     FenPrincipale();
+    void contextMenuEvent(QContextMenuEvent *event);
     ~FenPrincipale();
 
-    private:
+private slots:
+
+private:
+
 
 };
 #endif
